@@ -7,7 +7,7 @@ on:
       numFiles:
         description: 'Number of calculations'
         required: false
-        default: '100000'
+        default: '5000000'
         type: string
 
 concurrency: 
@@ -24,4 +24,4 @@ jobs:
         with:
           node-version: '16'
       - name: Run script
-        run: node --max-old-space-size=4096 script.js ${{ github.event.inputs.numFiles || '100000' }}
+        run: node --max-old-space-size=4096 script.js ${{ github.event.inputs.numFiles || '5000000' }}
