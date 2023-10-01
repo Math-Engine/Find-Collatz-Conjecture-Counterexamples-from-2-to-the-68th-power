@@ -7,7 +7,7 @@ on:
       numFiles:
         description: 'Number of calculations'
         required: false
-        default: '3141592'
+        default: '1500000'
         type: string
 
 run-name: Finding Collatz Conjectural Counterexamples ( ${{ github.event.inputs.numFiles || '1500000' }} )
@@ -26,4 +26,4 @@ jobs:
         with:
           node-version: '18.x'
       - name: Run script
-        run: node --max-old-space-size=4096 script.js ${{ github.event.inputs.numFiles || '3141592' }}
+        run: node --max-old-space-size=4096 script.js ${{ github.event.inputs.numFiles || '1500000' }}
