@@ -7,7 +7,7 @@ on:
       numFiles:
         description: 'Number of calculations'
         required: false
-        default: '1500000'
+        default: '1000000'
         type: string
 
 run-name: Finding Collatz Conjectural Counterexamples ( ${{ github.event.inputs.numFiles || '1500000' }} )
