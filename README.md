@@ -1,5 +1,7 @@
 <h1>콜라츠 추측 반례 찾기</h1>
 
+[![Finding Collatz Conjectural Counterexamples](https://github.com/Math-Engine/Find-Collatz-Conjecture-Counterexamples-from-2-to-the-68th-power/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/Math-Engine/Find-Collatz-Conjecture-Counterexamples-from-2-to-the-68th-power/actions/workflows/main.yml)
+
 <a href="https://github.com/Math-Engine/Find-Collatz-Conjecture-Counterexamples-from-2-to-the-68th-power/blob/main/max"><code>max</code></a>에 표시된 자연수까지 반례가 없습니다.
 <br>
 
