@@ -1,12 +1,12 @@
 run(`git pull origin main`)
 
-startNum = parse(BigInt, read("max", String))
+startNum = parse(BigInt, read("max", String)) + 1
 endNum = startNum;
 
 if length(ARGS) < 1
-    endNum = endNum + 1
+    endNum = endNum
 else
-    endNum = endNum + parse(BigInt, ARGS[1])
+    endNum = endNum + parse(BigInt, ARGS[1]) - 1
 end
 
 for i in startNum:endNum
@@ -42,7 +42,7 @@ run(`git config user.email "github-actions[bot]@users.noreply.github.com"`)
 
 commitMessage = ""
 if (endNum - startNum) > 1
-  commitMessage = "Calculated from $(startNum + 1) ~ $(endNum), no counterexamples"
+  commitMessage = "Calculated from $(startNum) ~ $(endNum), no counterexamples"
 else
   commitMessage = "Calculated $(endNum), no counterexample"
 end
