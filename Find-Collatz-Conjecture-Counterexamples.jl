@@ -12,14 +12,14 @@ end
 for i in startNum:endNum
   bigint_i = BigInt(i)
   n = bigint_i
-  if parse(Int, string(n)[end])%2 == 0
-    println("[$(n), $((string(n*5))[1:end - 1]), \"...\", 1]")
+  if n%2 == 0
+    # println("[$(n), $(n//2), \"...\", 1]")
     continue
   else
     HailStoneNumber = Any[n]
     while (n != 1)
-      if parse(Int, string(n)[end])%2 == 0
-        n = parse(BigInt, (string(n*5))[1:end - 1])
+      if n%2 == 0
+        n = n//2
       else
         n = n*3 + 1 # 3n + 1
       end
@@ -30,7 +30,7 @@ for i in startNum:endNum
     end
     push!(HailStoneNumber, n)
   end
-  println(HailStoneNumber)
+  # println(HailStoneNumber)
 end
 
 open("max", "w") do file
