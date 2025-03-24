@@ -21,9 +21,15 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      # - name: Setup Node.js
+      #   uses: actions/setup-node@v4
+      #   with:
+      #     node-version: '23.x'
+      # - name: Run script
+      #   run: node script.js ${{ github.event.inputs.numFiles || '1000000' }}
+      - name: Set up Julia
+        uses: julia-actions/setup-julia@v2
         with:
-          node-version: '23.x'
-      - name: Run script
-        run: node script.js ${{ github.event.inputs.numFiles || '1000000' }}
+          version: '1'
+      - name: Run test-1.jl
+        run: julia Find-Collatz-Conjecture-Counterexamples.jl ${{ github.event.inputs.numFiles || '1000000' }}
