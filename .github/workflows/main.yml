@@ -7,10 +7,10 @@ on:
       numFiles:
         description: 'Number of calculations'
         required: false
-        default: '2500000'
+        default: '5000000'
         type: string
 
-run-name: Finding Collatz Conjectural Counterexamples ( ${{ github.event.inputs.numFiles || '2500000' }} )
+run-name: Finding Collatz Conjectural Counterexamples ( ${{ github.event.inputs.numFiles || '5000000' }} )
 
 concurrency:
   group: my-workflow-group
@@ -32,4 +32,4 @@ jobs:
         with:
           version: '1'
       - name: Run test-1.jl
-        run: julia Find-Collatz-Conjecture-Counterexamples.jl ${{ github.event.inputs.numFiles || '2500000' }}
+        run: julia Find-Collatz-Conjecture-Counterexamples.jl ${{ github.event.inputs.numFiles || '5000000' }}
